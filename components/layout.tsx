@@ -34,9 +34,9 @@ export default function Layout({
         {home ? (
           <>
             <img
+              alt={name}
               src="/images/profile.jpg"
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
