@@ -6,5 +6,6 @@ declare module 'remark-html' {
 declare namespace JSX {
 	interface IntrinsicElements {
 		'amp-img': any;
+    'amp-timeago': any;
 	}
 }

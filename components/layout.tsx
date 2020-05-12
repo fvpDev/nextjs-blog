@@ -2,11 +2,9 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
-import { useAmp } from 'next/amp'
 
 const name = 'Fedor Parfenov'
 export const siteTitle = 'Next.js Sample Website'
-export const config = { amp: 'hybrid' }
 
 export default function Layout({
   children,
@@ -15,7 +13,6 @@ export default function Layout({
   children: React.ReactNode
   home?: boolean
 }) {
-  const isAmp = useAmp()
   return (
     <div className={styles.container}>
       <Head>
@@ -36,22 +33,11 @@ export default function Layout({
       <header className={styles.header}>
         {home ? (
           <>
-            {isAmp ? (
-              <amp-img
-                width="300"
-                height="300"
-                src="/images/profile.jpg"
-                alt={name}
-                className={`${utilStyles.borderCircle}`}
-                layout="responsive"
-              />
-            ) : (
-              <img
-                src="/images/profile.jpg"
-                className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-                alt={name}
-              />
-            )}
+            <img
+              alt={name}
+              src="/images/profile.jpg"
+              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+            />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
