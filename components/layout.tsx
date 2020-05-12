@@ -48,6 +48,7 @@ export default function Layout({
             ) : (
               <img
                 src="/images/profile.jpg"
+                className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
                 alt={name}
               />
             )}
