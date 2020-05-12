@@ -42,7 +42,7 @@ export default function Layout({
                 height="300"
                 src="/images/profile.jpg"
                 alt={name}
-                className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+                className={`${utilStyles.borderCircle}`}
                 layout="responsive"
               />
             ) : (
